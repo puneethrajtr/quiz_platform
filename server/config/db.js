@@ -5,11 +5,8 @@ require('dotenv').config();
  * PostgreSQL Database Connection Pool
  */
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'quiz_platform',
-  password: 'Puneeth',
-  port: 5432,
+  connectionString: process.env.DATABASE_URL || 'postgresql://postgres:Puneeth@localhost:5432/quiz_platform',
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
 });
 
 // Test connection
