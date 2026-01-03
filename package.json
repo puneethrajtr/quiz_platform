@@ -10,10 +10,16 @@
     "build": "cd client && npm run build",
     "vercel-build": "cd client && npm install && npm run build"
   },
-  "keywords": ["quiz", "react", "express", "postgresql"],
+  "keywords": [
+    "quiz",
+    "react",
+    "express",
+    "postgresql"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "pg": "^8.16.3"
   }
 }

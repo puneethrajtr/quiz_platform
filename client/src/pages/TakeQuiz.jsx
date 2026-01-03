@@ -19,6 +19,7 @@ const TakeQuiz = () => {
 
   useEffect(() => {
     fetchQuiz();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   useEffect(() => {
@@ -31,6 +32,7 @@ const TakeQuiz = () => {
       // Auto-submit when time expires
       handleSubmit();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft, result, quiz]);
 
   const fetchQuiz = async () => {
