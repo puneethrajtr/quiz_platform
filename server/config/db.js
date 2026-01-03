@@ -1,6 +1,12 @@
 const { Pool } = require('pg');
 require('dotenv').config();
 
+// Debug: Log connection attempt (remove password for security)
+if (process.env.NODE_ENV === 'production') {
+  console.log('Attempting database connection...');
+  console.log('DATABASE_URL exists:', !!process.env.DATABASE_URL);
+}
+
 /**
  * PostgreSQL Database Connection Pool
  */
