@@ -1,0 +1,19 @@
+{
+  "name": "quiz-platform",
+  "version": "1.0.0",
+  "description": "Complete Quiz Creation Platform with React and Express",
+  "main": "server/index.js",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "node server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "vercel-build": "cd client && npm install && npm run build"
+  },
+  "keywords": ["quiz", "react", "express", "postgresql"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
